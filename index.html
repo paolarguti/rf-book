@@ -5,128 +5,264 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="robots" content="noindex">
 
     <title></title>
 
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/material.css"/>
-    <link rel="stylesheet" href="./assets/material-theme.css"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
     <link rel="stylesheet" href="./assets/app.css"/>
-    <script>
-      const reduce = Function.bind.call(Function.call, Array.prototype.reduce);
-      const isEnumerable = Function.bind.call(Function.call, Object.prototype.propertyIsEnumerable);
-      const concat = Function.bind.call(Function.call, Array.prototype.concat);
-      const keys = Reflect.ownKeys;
-
-      if (!Object.values) {
-        Object.values = function values(O) {
-          return reduce(keys(O), (v, k) => concat(v, typeof k === 'string' && isEnumerable(O, k) ? [O[k]] : []), []);
-        };
-      }
-
-      if (!Object.entries) {
-        Object.entries = function entries(O) {
-          return reduce(keys(O), (e, k) => concat(e, typeof k === 'string' && isEnumerable(O, k) ? [[k, O[k]]] : []), []);
-        };
-      }
-    </script>
   </head>
 
-  <body>
+  <body class="flex flex-column overflow-x-hidden h-100 min-vh-100">
 
-    <main id="hero" class="bg-yellow">
-      <header class="min-vh-100 relative">
-        <div class="container min-vh-100 flex flex-column flex-row-ns pv5 items-center">
+    <header class="bg-near-white z-999 flex-none">
+      <div class="container pb5-l pb4">
+        <div class="bb flex justify-between items-end fw4 ttu tracked">
+          <p class="mb0 fw8 pt4 pb2">
+            <a href="/" class="black no-underline">Retirement Fail</a>
+          </p>
+          <nav class="dn db-l">
+            <ul class="list flex mv0 section f6">
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/author" class="black no-underline">
+                  About the author
+                </a>
+                <!-- if active -->
+                <!-- <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div> -->
+              </li>
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/quiz" class="black no-underline">
+                  Take the quiz
+                </a>
+              </li>
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/resources" class="black no-underline">
+                  Resources
+                </a>
+              </li>
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/contact" class="black no-underline">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
 
-          <div class="w-40-l w-50-m w-100 mb4 mb0-ns">
-            <img class="db shadow-5" src="./assets/book.png">
+          <a id="mobile-nav-open" href="#" class="db dn-l pt4 pb2 fw8"><i class="fas fa-bars"></i></a>
+        </div>
+      </div>
+
+      <div id="mobile-nav" class="fixed animated bg-white dn absolute--fill z-1 overflow-y-scroll">
+        <div class="ph3">
+          <div class="flex justify-between w-100 items-center bb pt4 pb2">
+            <a href="/" class="black still no-underline ttu tracked fw8">Retirement Fail</a>
+            </a>
+            <a id="mobile-nav-close" href="/" class="no-underline pointer fw8">X</a>
           </div>
+        </div>
 
-          <div class="w-60-l w-50-m w-100 pl5-l pl4-m">
-            <h1 class="fw9 f1-l f2 mt0 mb2 pb0">Coming Soon!</h1>
-            <h2 class="fw3 f5 lh-copy">Sign up to receive news, updates and much more</h2>
+        <ul class="pa3 ma0 list">
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/author" class="black no-underline">
+              About the author
+            </a>
+            <!-- if active -->
+            <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
+          </li>
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/quiz" class="black no-underline">
+              Take the quiz
+            </a>
+          </li>
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/resources" class="black no-underline">
+              Resources
+            </a>
+          </li>
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/contact" class="black no-underline">
+              Contact
+            </a>
+          </li>
+        </ul>
 
-            <div v-show="true" id="form" class="section" style="display: none;">
-              <div class="flex flex-row-l flex-column ph2">
-                <div class="ph2 w-50-l w-100">
-                  <md-field :class="{'md-invalid': !formValid && contactInfo.firstName === ''}">
-                    <label>First Name</label>
-                    <md-input v-model="contactInfo.firstName" placeholder="First Name"></md-input>
-                  </md-field>
-                </div>
+      </div>
+    </header>
 
-                <div class="ph2 w-50-l w-100">
-                  <md-field :class="{'md-invalid': !formValid && contactInfo.lastName === ''}">
-                    <label>Last Name</label>
-                    <md-input v-model="contactInfo.lastName" placeholder="Last Name"></md-input>
-                  </md-field>
-                </div>
+    <main class="bg-yellow w-100 overflow-hidden">
+      <header id="hero" class="relative">
+
+        <div class="relative">
+          <div class="container flex flex-column flex-row-ns items-center-l items-start mt3 mb5">
+
+            <div class="w-40-l w-50-m w-100 pr4-ns order-2 order-1-ns">
+              <img class="db shadow-5" src="./assets/book.png">
+            </div>
+
+            <div class="w-60-l w-50-m w-100 pl4-l order-1 order-2-ns mb4 mb0-ns">
+              <div class="mb4 pb3">
+                <quote class="f3">“This book opens our eyes to how much of our retirement success is truly within our own control.”</quote>
+                <p class="pt3 mt2 mb0 ttu f6 tracked">Bernie Clark<br>Charles Schwab & Co.</p>
               </div>
-
-              <div class="ph3">
-                <md-field :class="{'md-invalid': !formValid && contactInfo.email.indexOf('@') < 0}">
-                  <label>Email</label>
-                  <md-input v-model="contactInfo.email" placeholder="Email"></md-input>
-                </md-field>
-              </div>
-
-              <div class="ph3 pt2">
-                <md-field class="bg-near-white" :class="{'md-invalid': !formValid && contactInfo.message === ''}">
-                  <label>Message</label>
-                  <md-textarea v-model="contactInfo.message" placeholder="Message"></md-textarea>
-                </md-field>
-              </div>
-
-              <div class="ph3 pt2">
-                <button v-show="!formSubmitted" class="btn" @click.prevent="postForm">Subscribe</button>
-                <p v-show="formSubmitted" class="fw6 f4" style="color:#d3086a">We've received your message!</p>
+              <div class="flex flex-wrap items-center f6" style="margin-left: -0.5rem; margin-right: -0.5rem;">
+                <a href="https://www.wiley.com/en-us/Retirement+Fail%3A+The+9+Reasons+People+Flunk+Post+Work+Life+and+How+to+Ace+Your+Own-p-9781119452980" class="btn mh2 mb3 mb0-l" target="_blank">shop at Wiley</a>
+                <a href="https://www.amazon.com/Retirement-Fail-Reasons-People-Post-Work/dp/1119447402/ref=sr_1_1?ie=UTF8&qid=1518046485&sr=8-1&keywords=retirement+fail%27" class="btn mh2 mb3 mb0-l" target="_blank">Shop at Amazon</a>
+                <a href="https://www.barnesandnoble.com/w/retirement-fail-greg-sullivan/1126539411?ean=9781119447405 " class="btn mh2" target="_blank">Shop at Barnes & Noble</a>
               </div>
             </div>
           </div>
-
         </div>
       </header>
+
+      <section id="author" class="bg-white relative bg-yellow overflow-hidden">
+        <div class="relative pv3">
+          <div class="container flex flex-column flex-row-ns items-center justify-center">
+            <div class="bg-white shadow-4 pa4 tc mw-100">
+              <div class="paragraph mw-100 ma3-l">
+                <h2 class="f4 mb3 mt0">Take The Retirement Fail Quiz!</h2>
+                <p class="mb4">The choices we take are more important than the money we make. Take the free retirement fail quiz and learn how to avoid pitfalls that could keep you from your goals.</p>
+                <div class="dib">
+                  <a href="" class="btn f6 mh2 db">Take the quiz</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-near-white">
+        <div class="container pv5">
+          <div class="flex flex-column flex-row-ns items-center-l items-start">
+            <div class="w-40-ns w-100 tc mb3 mb0-ns pr4-ns">
+              <img class="mw-100 db" src="./assets/Sullivan-Greg-Square.jpg">
+            </div>
+            <div class="w-60-ns w-100 pl3-ns">
+              <h3 class="f3 mt0 mb3">The Author</h3>
+              <p>Greg Sullivan is the president and CEO of Sullivan, Bruyette, Speros & Blayney, and is a Certified Financial PlannerTM  professional and a certified public accountant (CPA) with more than 35 years of business, investment management, and financial planning experience. Barron’s, a national financial publication, has recognized Greg as one of the nation’s Top 100 Independent Financial Advisors and Washingtonian magazine named him as one of the Top Wealth Advisors in Washington, DC.</p>
+              <a href="underline">Learn more about Greg Sullivan</a>
+            </div>
+          </div>
+
+          <div id="slider" class="tc mv4 pt5 mw-100">
+            <div class="paragraph mw-100 tl center pv4 bt bb b--black mb4">
+              <transition tag="div" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" mode="out-in">
+                <div v-for="review in reviews" v-if="review.i == activeReview" :key="review.i">
+                  <a class="no-underline black still" href="#" @click.prevent="next">
+                    <p class="mb4" v-html="review.review"></p>
+                    <p class="mb0 ttu f6 tracked">{{ review.author }}</p>
+                  </a>
+                </div>
+              </transition>
+            </div>
+            <div class="flex justify-center">
+              <a v-for="review in reviews" :key="review.i" @click.prevent="activeReview = review.i" class="black pointer">
+                <div class="bg-white w1 h1 br-50 mh2 ba" :class="{'bg-blue': review.i == activeReview}"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-material@beta"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <footer class="flex-none bg-blue"">
+      <div class="relative pv2">
+        <div class="container">
+          <div class="flex flex-column flex-row-ns justify-between-ns justify-center items-center fw2 white">
+            <div class="f6 ttu tracked order-1-ns order-2">
+              ©Copyright Greg Sullivan 2018
+            </div>
 
+            <div class="flex section items-center f4 order-1 order-2-ns mb2 mb0-ns">
+              <a class="white" href="https://twitter.com/Retirement_Fail">
+                <i class="fab fa-twitter mh3"></i>
+              </a>
+
+              <a class="white" href="https://www.linkedin.com/in/greg-sullivan-sbsb/">
+                <i class="fab fa-linkedin-in mh3"></i>
+              </a>
+
+              <a class="white" href="https://twitter.com/Retirement_Fail">
+                <i class="fas fa-envelope mh3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- vue.js - a javascript framework -->
+    <script src="https://unpkg.com/vue"></script>
+
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+
+    <!-- mobile nav -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        // mobile nav
+        $('#mobile-nav-close').click(function (e) {
+          e.preventDefault();
+          $('#mobile-nav').addClass('slideOutRight').removeClass('slideInRight');
+          $('body').removeClass('overlay-is-open')
+        });
+        $('#mobile-nav-open').click(function (e) {
+          e.preventDefault();
+          $('#mobile-nav').addClass('slideInRight').removeClass('slideOutRight dn');
+          $('body').addClass('overlay-is-open');
+        });
+
+        // nav active state
+        $(function() {
+          $('.nav-link[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+        });
+      });
+    </script>
+
+    <!-- reviews slider -->
     <script>
-      Vue.use(VueMaterial.default);
-
-      var deliveryEditor = new Vue({
-        el: '#form',
+      var slider = new Vue({
+        el: '#slider',
         data: {
-          contactInfo: {
-            firstName: '',
-            lastName: '',
-            email: '',
-            message: ''
-          },
-          formValid: true,
-          formSubmitted: false
+          activeReview: 1,
+          reviews: [
+            {
+              i: 1,
+              review: '“Greg Sullivan reveals why the choices we make are sometimes more important than the income we make.<br><br>In a very conversational way, Greg reveals how people in retirement create unnecessary stress in their golden years by buying things, building things or pursuing immediate gratification without regard to the impact on their long-term life style and their pursuit of happiness.<br><br>With this book, Greg brings wonderful perspective from his years of experience in working with those transitioning to the last third of their lives. He also does a masterful job of provoking other financial professionals to dig into the human side and not just rely in the numbers to give meaningful guidance to their clients.”',
+              author: 'Mark Tibergien, Chief Executive Officer, Pershing Advisor Solutions, a BNY Mellon Company'
+            },
+            {
+              i: 2,
+              review: '“As a trained accountant, Greg Sullivan knows the numbers behind retirement success. What sets him apart, however, are the stories he’s accumulated over his distinguished career of how even the best of us can fail at retirement.<br><br>This rare right-brain/left-brain view provides valuable guidance that can help all of us better navigate the road to a successful retirement and a more meaningful life.<br><br>Leave it to a CPA to write the best story-based guide to retirement that you’ll ever read!”',
+              author: 'Don Phillips, Managing Director, Morningstar'
+            },
+            {
+              i: 3,
+              review: '“With a thoughtful effort to focus on the most practical points, Sullivan lays out for the readers of Retirement Fail a step-by-step guide to mastering a successful and financially stable retirement. Drawing on decades of experience and wisdom in helping people avoid or recover from their money mistakes, he illuminates a litany of must-do rules and real-life lessons to ensure retirement funds last. It is a worthy read for any investor—Bravo!”',
+              author: 'Sterling Shea, Associate Publisher, Head of Advisory Programs, Barron’s'
+            },
+            {
+              i: 4,
+              review: '“The average person spends more than 50 years of his or her life working, and many of those years saving for and preparing for retirement. Greg Sullivan’s Retirement Fail: The 9 Reasons People Flunk Post-Work Life— and How to Ace Your Own serves as a guide to avoiding behavioral and lifestyle mistakes that can trip us up, and frankly, are easy to make.<br><br>This book opens our eyes to how much of our retirement success is truly within our own control.”',
+              author: 'Bernie Clark, Executive Vice President, Advisor Services, Charles Schwab & Co.'
+            },
+            {
+              i: 5,
+              review: '“If you’re approaching or are in retirement this is a book you need to read. The introduction asks, “What is most important to you in your post-work life and how can you translate that into your day-to-day living and decision making?” Retirement Fail delivers on its commitment to help you answer that essential question.<br><br>Think of Retirement Fail as tough love. Reading all of the possible reasons your retirement may fail might seem to be an unpleasant experience but Greg Sullivan’s very readable real-world vignettes on issues from “imprudent spending” to “graying divorce” will provide you with the awareness and knowledge you need to insure you don’t fail”',
+              author: 'Harold Evensky CFP®'
+            }
+          ],
         },
-        methods: {
-          onSuccess: function() {
-            this.contactInfo.firstName = '';
-            this.contactInfo.lastName = '';
-            this.contactInfo.email = '';
-            this.contactInfo.message = '';
-            this.formSubmitted = true;
-          },
-          postForm: function() {
-            var self = this;
-            if (this.contactInfo.firstName != '' && this.contactInfo.lastName != '' && this.contactInfo.firstName != '' && this.contactInfo.email.indexOf('@') >= 0 && this.contactInfo.message != '') {
-              this.formValid = true;
-            } else {
-              this.formValid = false;
-            }
-            if (this.formValid) {
-              jQuery.post('https://hooks.zapier.com/hooks/catch/3023268/kb5o5i/', self.contactInfo, function() {self.onSuccess();});
 
-            }
+        methods: {
+          next: function() {
+            this.activeReview = this.activeReview == 5 ? 1 : this.activeReview + 1;
           }
         }
       });
