@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/material.css"/>
+    <link rel="stylesheet" href="./assets/material-theme.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="./assets/app.css"/>
+    <script>
+      const reduce = Function.bind.call(Function.call, Array.prototype.reduce);
+      const isEnumerable = Function.bind.call(Function.call, Object.prototype.propertyIsEnumerable);
+      const concat = Function.bind.call(Function.call, Array.prototype.concat);
+      const keys = Reflect.ownKeys;
+
+      if (!Object.values) {
+        Object.values = function values(O) {
+          return reduce(keys(O), (v, k) => concat(v, typeof k === 'string' && isEnumerable(O, k) ? [O[k]] : []), []);
+        };
+      }
+
+      if (!Object.entries) {
+        Object.entries = function entries(O) {
+          return reduce(keys(O), (e, k) => concat(e, typeof k === 'string' && isEnumerable(O, k) ? [[k, O[k]]] : []), []);
+        };
+      }
+    </script>
+  </head>
+
+  <body>
+
+    <main id="hero" class="bg-yellow">
+      <header class="min-vh-100 relative">
+        <div class="container min-vh-100 flex flex-column flex-row-ns pv5 items-center">
+
+          <div class="w-40-l w-50-m w-100 mb4 mb0-ns">
+            <img class="db shadow-5" src="./assets/book.png">
+          </div>
+
+          <div class="w-60-l w-50-m w-100 pl5-l pl4-m">
+            <h1 class="fw9 f1-l f2 mt0 mb2 pb0">Coming Soon!</h1>
+            <h2 class="fw3 f5 lh-copy">Sign up to receive news, updates and much more</h2>
+
+            <div v-show="true" id="form" class="section" style="display: none;">
+              <div class="flex flex-row-l flex-column ph2">
+                <div class="ph2 w-50-l w-100">
+                  <md-field :class="{'md-invalid': !formValid && contactInfo.firstName === ''}">
+                    <label>First Name</label>
+                    <md-input v-model="contactInfo.firstName" placeholder="First Name"></md-input>
+                  </md-field>
+                </div>
+
+                <div class="ph2 w-50-l w-100">
+                  <md-field :class="{'md-invalid': !formValid && contactInfo.lastName === ''}">
+                    <label>Last Name</label>
+                    <md-input v-model="contactInfo.lastName" placeholder="Last Name"></md-input>
+                  </md-field>
+                </div>
+              </div>
+
+              <div class="ph3">
+                <md-field :class="{'md-invalid': !formValid && contactInfo.email.indexOf('@') < 0}">
+                  <label>Email</label>
+                  <md-input v-model="contactInfo.email" placeholder="Email"></md-input>
+                </md-field>
+              </div>
+
+              <div class="ph3 pt2">
+                <md-field class="bg-near-white" :class="{'md-invalid': !formValid && contactInfo.message === ''}">
+                  <label>Message</label>
+                  <md-textarea v-model="contactInfo.message" placeholder="Message"></md-textarea>
+                </md-field>
+              </div>
+
+              <div class="ph3 pt2">
+                <button v-show="!formSubmitted" class="btn" @click.prevent="postForm">Subscribe</button>
+                <p v-show="formSubmitted" class="fw6 f4" style="color:#d3086a">We've received your message!</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </header>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-material@beta"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+      Vue.use(VueMaterial.default);
+
+      var deliveryEditor = new Vue({
+        el: '#form',
+        data: {
+          contactInfo: {
+            firstName: '',
+            lastName: '',
+            email: '',
+            message: ''
+          },
+          formValid: true,
+          formSubmitted: false
+        },
+        methods: {
+          onSuccess: function() {
+            this.contactInfo.firstName = '';
+            this.contactInfo.lastName = '';
+            this.contactInfo.email = '';
+            this.contactInfo.message = '';
+            this.formSubmitted = true;
+          },
+          postForm: function() {
+            var self = this;
+            if (this.contactInfo.firstName != '' && this.contactInfo.lastName != '' && this.contactInfo.firstName != '' && this.contactInfo.email.indexOf('@') >= 0 && this.contactInfo.message != '') {
+              this.formValid = true;
+            } else {
+              this.formValid = false;
+            }
+            if (this.formValid) {
+              jQuery.post('https://hooks.zapier.com/hooks/catch/3023268/kb5o5i/', self.contactInfo, function() {self.onSuccess();});
+
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

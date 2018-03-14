@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="noindex">
+
+    <title></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="./assets/app.css"/>
+  </head>
+
+  <body class="flex flex-column overflow-x-hidden h-100 min-vh-100">
+
+    <header class="bg-near-white z-999 flex-none">
+      <div class="container pb5-l pb4">
+        <div class="bb flex justify-between items-end fw4 ttu tracked">
+          <p class="mb0 fw8 pt4 pb2">
+            <a href="/" class="black no-underline">Retirement Fail</a>
+          </p>
+          <nav class="dn db-l">
+            <ul class="list flex mv0 section f6">
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/author" class="black no-underline">
+                  About the author
+                </a>
+                <!-- if active -->
+                <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
+              </li>
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/quiz" class="black no-underline">
+                  Take the quiz
+                </a>
+              </li>
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/resources" class="black no-underline">
+                  Resources
+                </a>
+              </li>
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/contact" class="black no-underline">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <a id="mobile-nav-open" href="#" class="db dn-l pt4 pb2 fw8"><i class="fas fa-bars"></i></a>
+        </div>
+      </div>
+
+      <div id="mobile-nav" class="fixed animated bg-white dn absolute--fill z-1 overflow-y-scroll">
+        <div class="ph3">
+          <div class="flex justify-between w-100 items-center bb pt4 pb2">
+            <a href="/" class="black still no-underline ttu tracked fw8">Retirement Fail</a>
+            </a>
+            <a id="mobile-nav-close" href="/" class="no-underline pointer fw8">X</a>
+          </div>
+        </div>
+
+        <ul class="pa3 ma0 list">
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/author" class="black no-underline">
+              About the author
+            </a>
+            <!-- if active -->
+            <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
+          </li>
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/quiz" class="black no-underline">
+              Take the quiz
+            </a>
+          </li>
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/resources" class="black no-underline">
+              Resources
+            </a>
+          </li>
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/contact" class="black no-underline">
+              Contact
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </header>
+
+    <main class="w-100 overflow-hidden bg-near-white">
+      <section class="bg-near-white mb5">
+        <div class="container">
+          <div class="center paragraph mw-100 ma3">
+            <h2 class="f3 mt0">Why Another Book on Retirement?</h2>
+            <p>Every day, I and my colleagues at Sullivan, Bruyette, Speros & Blayney (SBSB) talk with our clients about decision making in retirement and in the leadup years. And while we discuss investments, how to best allocate portfolios for cash needs, taxes, and other related items, most of our energy goes into discussions that are far thornier. These conversations can be delicate because they often involve a person’s most deep-rooted wishes, fears, or insecurities: maintaining his or her role as provider for the kids (even though the children are in their 30s); recovering one’s identity after exiting the professional world by starting a business (even a high-risk business like a trendy restaurant or vineyard); or buying that dream vacation home (even though it might not be truly affordable). The more I thought about it, the more I realized how critical the emotional part of retirement planning and decision making truly is, and how much my clients and others like them could benefit from a guide to take away, with stories that underlined the realities of some common retirement fails.</p>
+
+            <p >Which brings me back around to the reason I wrote this book—and, more importantly, to the reason you should read it. At the heart of retirement planning is the question: what is most important to you in your post-work life and how can you translate that into your day-to-day living and decision making? Once you know the answer to that question, you can frame your decisions so that your assets are truly working for you and your spending is aligned with your values and objectives.  Retirement Fail helps you answer that essential question, addressing the nine ways you are most likely to compromise your retirement. Armed with a sense of your values and goals – and a true awareness of the challenges that may lie ahead – you can craft a plan that lets you ace your retirement.</p>
+
+            <p class="mb0">This book is about how to succeed in retirement by being aware of the reasons people fail, even though they have done a good job saving and investing for their retirement.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb5">
+        <div class="container">
+          <div class="flex flex-column flex-row-ns bg-white shadow-4">
+            <div class="w-third-ns w-100 tc mb3 mb0-ns">
+              <img class="w-100 db" src="./assets/Sullivan-Greg.jpg">
+            </div>
+            <div class="w-two-thirds-ns w-100 pa4-l pa3 flex">
+              <div class="ma3 relative w-100 overflow-auto">
+                <div class="absolute-ns absolute-fill-ns relative">
+                  <h3 class="f3 mt0 mb3">Greg Sullivan</h3>
+                  <p>Greg Sullivan is the president and CEO of Sullivan, Bruyette, Speros & Blayney, and is a Certified Financial PlannerTM  professional and a certified public accountant (CPA) with more than 35 years of business, investment management, and financial planning experience. Barron’s, a national financial publication, has recognized Greg as one of the nation’s Top 100 Independent Financial Advisors and Washingtonian magazine named him as one of the Top Wealth Advisors in Washington, DC.</p>
+                  <p>After earning his degree in accounting from the Pennsylvania State University, Greg started his career with Ernst & Whinney (now Ernst & Young). In 1991 he cofounded SBSB, a wealth management firm providing financial planning and investment advice to high-net-worth and ultra-high-net-worth clients. He and his partners later sold to Harris Bank, a subsidiary of Bank of Montreal, and partnering with these banks allowed Sullivan and his cofounders to expand their business. In early 2016, the SBSB partners repurchased the company from Bank of Montreal. The firm currently provides holistic financial planning for nearly 900 clients and tax preparation for approximately 500 clients, and manages over $3.5 billion in assets.</p>
+                  <p>Greg’s involvement in the financial planning and wealth management communities is well established. He is a member of the American Institute of Certified Public Accountants (AICPA) and the Financial Planning Association (FPA). In addition, he is a founding member of both the Alpha Group and Blind Squirrels, national consortia of wealth managers and business owners. He served as chairman (1996–1997), president (1995–1996), and on the board of directors (1989–1997) of the International Association for Financial Planning (now called the Financial Planning Association).</p>
+                  <p>An avid skier, cyclist, and triathlete, Greg is the father of two grown children. He and his wife live in Alexandria, Virginia.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="flex-none bg-blue"">
+      <div class="relative pv2">
+        <div class="container">
+          <div class="flex flex-column flex-row-ns justify-between-ns justify-center items-center fw2 white">
+            <div class="f6 ttu tracked order-1-ns order-2">
+              ©Copyright Greg Sullivan 2018
+            </div>
+
+            <div class="flex section items-center f4 order-1 order-2-ns mb2 mb0-ns">
+              <a class="white" href="https://twitter.com/Retirement_Fail">
+                <i class="fab fa-twitter mh3"></i>
+              </a>
+
+              <a class="white" href="https://www.linkedin.com/in/greg-sullivan-sbsb/">
+                <i class="fab fa-linkedin-in mh3"></i>
+              </a>
+
+              <a class="white" href="https://twitter.com/Retirement_Fail">
+                <i class="fas fa-envelope mh3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- vue.js - a javascript framework -->
+    <script src="https://unpkg.com/vue"></script>
+
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+
+    <!-- mobile nav -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        // mobile nav
+        $('#mobile-nav-close').click(function (e) {
+          e.preventDefault();
+          $('#mobile-nav').addClass('slideOutRight').removeClass('slideInRight');
+          $('body').removeClass('overlay-is-open')
+        });
+        $('#mobile-nav-open').click(function (e) {
+          e.preventDefault();
+          $('#mobile-nav').addClass('slideInRight').removeClass('slideOutRight dn');
+          $('body').addClass('overlay-is-open');
+        });
+
+        // nav active state
+        $(function() {
+          $('.nav-link[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+/* #Vendors Reset */
+
+  /* ##animate */
+  .animated {
+    -webkit-animation-duration:0.1s;
+            animation-duration:0.1s;
+  }
+
+  /* ##tachyons */
+  .f1 {font-size: 3.998rem;}
+  .f2, h1, h2 {font-size: 2.827rem;}
+  .f3, h3 {font-size: 1.999rem;}
+  .f4, h4 {font-size: 1.414rem;}
+  .f6 {font-size: 0.707rem;}
+  .f7 {font-size: 0.5rem;}
+
+
+  .bg-near-white {
+    background-color: #fafafa;
+  }
+
+  .yellow {
+    color: #fdb813;
+  }
+
+  .bg-yellow {
+    background-color: #fdb813;
+  }
+
+  .b--yellow {
+    border-color: #fdb813;
+  }
+
+  .blue {
+    color: #00709a;
+  }
+
+  .bg-blue {
+    background-color: #00709a;
+  }
+
+  .b--blue {
+    border-color: #00709a;
+  }
+
+/* #Reset */
+  html {
+    font-size:18px;
+  }
+
+  body {
+    font-family:'Muli', sans-serif;
+    font-weight: 300;
+    line-height: 1.618;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+  }
+  h1, h2, h3 {
+    line-height: 1.25;
+  }
+
+  a {
+    color: #009bd9;
+  }
+
+  a:hover:not(.still),
+  a:active:not(.still) {
+    color: #005e82;
+  }
+
+/* #layout */
+
+  /* ##keep footer at the bottom */
+  main {
+    -webkit-box-flex: 1 0 auto;
+       -moz-box-flex: 1 0 auto;
+        -webkit-flex: 1 0 auto;
+            -ms-flex: 1 0 auto;
+                flex: 1 0 auto;
+  }
+
+  main:after {
+    content: '\00a0';
+    display: block;
+    height: 0px;
+    visibility: hidden;
+  }
+
+/* #helpers */
+  .container {
+    width: 1100px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .section {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+  }
+
+  .paragraph {
+    width: 600px;
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.08);
+    font-family:'Muli', sans-serif, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.75rem 1rem;
+    border-radius: 2px;
+  }
+
+  a.btn:active,
+  a.btn:focus,
+  a.btn:hover {
+    color: #fff;
+  }
+
+  .br-50 {
+    border-radius:50%;
+  }
+
+  .top-100 {
+    top:100%;
+  }
+
+  .ar-golden {
+    position: relative;
+  }
+  .ar-golden:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 61.8034%;
+  }
+  .ar-golden .image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+
+  .ar-square {
+    position: relative;
+  }
+  .ar-square:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 100%;
+  }
+  .ar-square .image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+
+
+
+/* #index */
+  #hero:before {
+    content: "";
+    background: #fafafa;
+    position: absolute;
+    top: 0;
+    bottom: 25%;
+    left:0;
+    right:0;
+    -webkit-transform: skew(0deg, 8deg);
+    transform: skew(0deg, 8deg);
+    padding-top: 200px;
+    margin-top: -200px;
+
+  }
+
+  #author:before {
+    content: "";
+    background: #fafafa;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left:0;
+    right:0;
+    -webkit-transform: skew(0deg, 6deg);
+    transform: skew(0deg, 6deg);
+    padding-bottom: 200px;
+    margin-bottom: -200px;
+  }
+
+   #blog:before {
+    content: "";
+    background: #fafafa;
+    position: absolute;
+    top: 144px;
+    bottom: 0;
+    left:0;
+    right:0;
+    -webkit-transform: skew(0deg, 6deg);
+    transform: skew(0deg, 6deg);
+    padding-bottom: 200px;
+    margin-bottom: -200px;
+
+  }
+
+/*not small*/
+@media screen and (min-width:30em) {
+  .ar-square-ns:before {
+    padding-top: 100%;
+  }
+}
+
+/*medium*/
+@media screen and (min-width:30em) and (max-width:60em) {}
+
+/*large*/
+@media screen and (min-width:60em) {
+  .container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .section {
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+
+  .f1-l {font-size: 3.998rem;}
+  .f2-l, h1, h2 {font-size: 2.827rem;}
+  .f3-l, h3 {font-size: 1.999rem;}
+  .f4-l, h4 {font-size: 1.414rem;}
+  .f6-l {font-size: 0.707rem;}
+  .f7-l {font-size: 0.5rem;}
+}

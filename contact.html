@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="noindex">
+
+    <title></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/material.css"/>
+    <link rel="stylesheet" href="./assets/material-theme.css"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="./assets/app.css"/>
+  </head>
+
+  <body class="bg-near-white flex flex-column overflow-x-hidden h-100 min-vh-100">
+
+    <header class="z-999 flex-none">
+      <div class="container pb5-l pb4">
+        <div class="bb flex justify-between items-end fw4 ttu tracked">
+          <p class="mb0 fw8 pt4 pb2">
+            <a href="/" class="black no-underline">Retirement Fail</a>
+          </p>
+          <nav class="dn db-l">
+            <ul class="list flex mv0 section f6">
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/author" class="black no-underline">
+                  About the author
+                </a>
+              </li>
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/quiz" class="black no-underline">
+                  Take the quiz
+                </a>
+              </li>
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/resources" class="black no-underline">
+                  Resources
+                </a>
+              </li>
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/contact" class="black no-underline">
+                  Contact
+                </a>
+                <!-- if active -->
+                <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
+              </li>
+            </ul>
+          </nav>
+
+          <a id="mobile-nav-open" href="#" class="db dn-l pt4 pb2 fw8"><i class="fas fa-bars"></i></a>
+        </div>
+      </div>
+
+      <div id="mobile-nav" class="fixed animated bg-white dn absolute--fill z-1 overflow-y-scroll">
+        <div class="ph3">
+          <div class="flex justify-between w-100 items-center bb pt4 pb2">
+            <a href="/" class="black still no-underline ttu tracked fw8">Retirement Fail</a>
+            </a>
+            <a id="mobile-nav-close" href="/" class="no-underline pointer fw8">X</a>
+          </div>
+        </div>
+
+        <ul class="pa3 ma0 list">
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/author" class="black no-underline">
+              About the author
+            </a>
+            <!-- if active -->
+            <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
+          </li>
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/quiz" class="black no-underline">
+              Take the quiz
+            </a>
+          </li>
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/resources" class="black no-underline">
+              Resources
+            </a>
+          </li>
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/contact" class="black no-underline">
+              Contact
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </header>
+
+    <main class="w-100 overflow-hidden">
+      <section class="container tc pb4">
+        <div id="form" class="pa4-ns pa3 bg-white shadow-4 dib tl mw-100">
+          <div v-show="true" id="form" class="paragraph mw-100 center" style="display: none;">
+            <div class="flex flex-row-l flex-column ph2">
+              <div class="ph2 w-50-l w-100">
+                <md-field :class="{'md-invalid': !formValid && contactInfo.firstName === ''}">
+                  <label>First Name</label>
+                  <md-input v-model="contactInfo.firstName" placeholder="First Name"></md-input>
+                </md-field>
+              </div>
+
+              <div class="ph2 w-50-l w-100">
+                <md-field :class="{'md-invalid': !formValid && contactInfo.lastName === ''}">
+                  <label>Last Name</label>
+                  <md-input v-model="contactInfo.lastName" placeholder="Last Name"></md-input>
+                </md-field>
+              </div>
+            </div>
+
+            <div class="ph3">
+              <md-field :class="{'md-invalid': !formValid && contactInfo.email.indexOf('@') < 0}">
+                <label>Email</label>
+                <md-input v-model="contactInfo.email" placeholder="Email"></md-input>
+              </md-field>
+            </div>
+
+            <div class="ph3 pt2">
+              <md-field :class="{'md-invalid': !formValid && contactInfo.message === ''}">
+                <label>Message</label>
+                <md-textarea v-model="contactInfo.message" placeholder="Message"></md-textarea>
+              </md-field>
+            </div>
+
+            <div class="ph3 pt2">
+              <button v-show="!formSubmitted" class="btn dib" @click.prevent="postForm">Send Message</button>
+              <p v-show="formSubmitted" class="fw6 f4" style="color:#d3086a">We've received your message!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="flex-none bg-blue"">
+      <div class="relative pv2">
+        <div class="container">
+          <div class="flex flex-column flex-row-ns justify-between-ns justify-center items-center fw2 white">
+            <div class="f6 ttu tracked order-1-ns order-2">
+              ©Copyright Greg Sullivan 2018
+            </div>
+
+            <div class="flex section items-center f4 order-1 order-2-ns mb2 mb0-ns">
+              <a class="white" href="https://twitter.com/Retirement_Fail">
+                <i class="fab fa-twitter mh3"></i>
+              </a>
+
+              <a class="white" href="https://www.linkedin.com/in/greg-sullivan-sbsb/">
+                <i class="fab fa-linkedin-in mh3"></i>
+              </a>
+
+              <a class="white" href="https://twitter.com/Retirement_Fail">
+                <i class="fas fa-envelope mh3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- vue.js - a javascript framework -->
+    <script src="https://unpkg.com/vue"></script>
+
+    <script src="https://unpkg.com/vue-material@beta"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+
+    <!-- mobile nav -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        // mobile nav
+        $('#mobile-nav-close').click(function (e) {
+          e.preventDefault();
+          $('#mobile-nav').addClass('slideOutRight').removeClass('slideInRight');
+          $('body').removeClass('overlay-is-open')
+        });
+        $('#mobile-nav-open').click(function (e) {
+          e.preventDefault();
+          $('#mobile-nav').addClass('slideInRight').removeClass('slideOutRight dn');
+          $('body').addClass('overlay-is-open');
+        });
+
+        // nav active state
+        $(function() {
+          $('.nav-link[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+        });
+      });
+    </script>
+
+    <!-- contact form -->
+    <script>
+      Vue.use(VueMaterial.default);
+
+      var deliveryEditor = new Vue({
+        el: '#form',
+        data: {
+          contactInfo: {
+            firstName: '',
+            lastName: '',
+            email: '',
+            message: ''
+          },
+          formValid: true,
+          formSubmitted: false
+        },
+        methods: {
+          onSuccess: function() {
+            this.contactInfo.firstName = '';
+            this.contactInfo.lastName = '';
+            this.contactInfo.email = '';
+            this.contactInfo.message = '';
+            this.formSubmitted = true;
+          },
+          postForm: function() {
+            var self = this;
+            if (this.contactInfo.firstName != '' && this.contactInfo.lastName != '' && this.contactInfo.firstName != '' && this.contactInfo.email.indexOf('@') >= 0 && this.contactInfo.message != '') {
+              this.formValid = true;
+            } else {
+              this.formValid = false;
+            }
+            if (this.formValid) {
+              jQuery.post('https://hooks.zapier.com/hooks/catch/3023268/kb5o5i/', self.contactInfo, function() {self.onSuccess();});
+
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
