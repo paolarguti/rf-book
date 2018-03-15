@@ -14,7 +14,6 @@
   .f6 {font-size: 0.707rem;}
   .f7 {font-size: 0.5rem;}
 
-
   .bg-near-white {
     background-color: #fafafa;
   }
@@ -44,18 +43,20 @@
   }
 
 /* #Reset */
-  html {
-    font-size:18px;
+  html, input, textarea, button {
+    font-size: 18px;
   }
 
   body {
-    font-family:'Muli', sans-serif;
+    font-family: 'Muli', sans-serif;
     font-weight: 300;
     line-height: 1.618;
   }
+
   p, h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
   }
+
   h1, h2, h3 {
     line-height: 1.25;
   }
@@ -114,7 +115,7 @@
     border: none;
     cursor: pointer;
     box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.08);
-    font-family:'Muli', sans-serif, sans-serif;
+    font-family: 'Muli', sans-serif, sans-serif;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -136,33 +137,27 @@
     top:100%;
   }
 
-  .ar-golden {
-    position: relative;
-  }
-  .ar-golden:before {
-    display: block;
-    content: "";
-    width: 100%;
-    padding-top: 61.8034%;
-  }
-  .ar-golden .image-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-  }
-
+  /* ##aspect ratio */
+  .ar-golden,
   .ar-square {
     position: relative;
   }
+
+  .ar-golden:before,
   .ar-square:before {
     display: block;
     content: "";
     width: 100%;
+  }
+
+  .ar-golden:before {
+    padding-top: 61.8034%;
+  }
+
+  .ar-square:before {
     padding-top: 100%;
   }
+  .ar-golden .image-container,
   .ar-square .image-container {
     position: absolute;
     top: 0;
@@ -172,51 +167,39 @@
     overflow: hidden;
   }
 
-
-
-/* #index */
-  #hero:before {
+/* #backgrounds */
+  #hero:before,
+  #cta:before,
+  #blog:before {
     content: "";
     background: #fafafa;
     position: absolute;
+    left:0;
+    right:0;
+    -webkit-transform: skew(0deg, 6deg);
+    transform: skew(0deg, 6deg);
+  }
+
+  #hero:before {
     top: 0;
     bottom: 25%;
-    left:0;
-    right:0;
-    -webkit-transform: skew(0deg, 8deg);
-    transform: skew(0deg, 8deg);
     padding-top: 200px;
     margin-top: -200px;
-
   }
 
-  #author:before {
-    content: "";
-    background: #fafafa;
-    position: absolute;
+  #cta:before,
+  #blog:before {
+    bottom: 0;
+    padding-bottom: 200px;
+    margin-bottom: -200px;
+  }
+
+  #cta:before {
     top: 50%;
-    bottom: 0;
-    left:0;
-    right:0;
-    -webkit-transform: skew(0deg, 6deg);
-    transform: skew(0deg, 6deg);
-    padding-bottom: 200px;
-    margin-bottom: -200px;
   }
 
-   #blog:before {
-    content: "";
-    background: #fafafa;
-    position: absolute;
+  #blog:before {
     top: 144px;
-    bottom: 0;
-    left:0;
-    right:0;
-    -webkit-transform: skew(0deg, 6deg);
-    transform: skew(0deg, 6deg);
-    padding-bottom: 200px;
-    margin-bottom: -200px;
-
   }
 
 /*not small*/

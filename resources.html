@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+
+    <!-- remove -->
     <meta name="robots" content="noindex">
 
-    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900" rel="stylesheet">
+    <!-- font awesome - an icons library -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <!-- animate.css - a css animations library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- tachyons - a css framework -->
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
     <link rel="stylesheet" href="./assets/app.css"/>
   </head>
 
-  <body class="flex flex-column overflow-x-hidden h-100 min-vh-100">
-
+  <body class="bg-near-white flex flex-column overflow-x-hidden h-100 min-vh-100">
     <header class="bg-yellow z-999 flex-none">
       <div class="container pb5-l pb4">
         <div class="bb flex justify-between items-end fw4 ttu tracked">
           <p class="mb0 fw8 pt4 pb2">
             <a href="/" class="black no-underline">Retirement Fail</a>
           </p>
+
           <nav class="dn db-l">
             <ul class="list flex mv0 section f6">
               <li class="mh3 pt4 pb2 relative">
                 <a href="/author" class="black no-underline">
-                  About the author
+                  The author
                 </a>
               </li>
               <li class="mh3 pt4 pb2 relative">
@@ -40,9 +41,9 @@
               <li class="mh3 pt4 pb2 relative">
                 <a href="/resources" class="black no-underline">
                   Resources
+                  <!-- if active -->
+                  <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
                 </a>
-                <!-- if active -->
-                <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
               </li>
               <li class="mh3 pt4 pb2 relative">
                 <a href="/contact" class="black no-underline">
@@ -52,16 +53,23 @@
             </ul>
           </nav>
 
-          <a id="mobile-nav-open" href="#" class="db dn-l pt4 pb2 fw8"><i class="fas fa-bars"></i></a>
+          <!-- mobile navigation trigger -->
+          <a id="mobile-nav-open" href="#" class="db dn-l pt4 pb2 fw8">
+            <i class="fas fa-bars"></i>
+          </a>
         </div>
       </div>
 
+      <!-- mobile navigation -->
       <div id="mobile-nav" class="fixed animated bg-white dn absolute--fill z-1 overflow-y-scroll">
         <div class="ph3">
-          <div class="flex justify-between w-100 items-center bb pt4 pb2">
-            <a href="/" class="black still no-underline ttu tracked fw8">Retirement Fail</a>
+          <div class="flex justify-between w-100 items-center bb pt4 pb2 fw8">
+            <a href="/" class="black no-underline ttu tracked">
+              Retirement Fail
             </a>
-            <a id="mobile-nav-close" href="/" class="no-underline pointer fw8">X</a>
+            <a id="mobile-nav-close" href="#" class="no-underline pointer">
+              X
+            </a>
           </div>
         </div>
 
@@ -89,17 +97,14 @@
             </a>
           </li>
         </ul>
-
       </div>
     </header>
 
-    <main class="bg-near-white w-100 overflow-hidden">
-
+    <main class="w-100 overflow-hidden">
       <div id="blog" class="bg-yellow relative">
+
         <article class="relative container pb5">
-
           <div class="flex flex-column flex-row-ns bg-white shadow-4 mb4">
-
             <div class="w-40-ns w-100 cover" style="background: url('http://www.efficientlearning.com/blog/wp-content/uploads/sites/10/2016/03/HiRes1.jpg');">
               <a href="/article">
                 <div class="ar-square-ns ar-golden"></div>
@@ -229,31 +234,28 @@
     <footer class="flex-none bg-blue"">
       <div class="relative pv2">
         <div class="container">
-          <div class="flex flex-column flex-row-ns justify-between-ns justify-center items-center fw2 white">
+          <div class="flex flex-column flex-row-ns justify-between-ns justify-center items-center white">
             <div class="f6 ttu tracked order-1-ns order-2">
               ©Copyright Greg Sullivan 2018
             </div>
 
-            <div class="flex section items-center f4 order-1 order-2-ns mb2 mb0-ns">
-              <a class="white" href="https://twitter.com/Retirement_Fail">
-                <i class="fab fa-twitter mh3"></i>
+            <div class="flex section items-center f4 order-1 order-2-ns ph2-l mb2 mb0-ns">
+              <a class="white still" href="https://twitter.com/Retirement_Fail">
+                <i class="fab fa-twitter mh2 ph1"></i>
               </a>
 
-              <a class="white" href="https://www.linkedin.com/in/greg-sullivan-sbsb/">
-                <i class="fab fa-linkedin-in mh3"></i>
+              <a class="white still" href="https://www.linkedin.com/in/greg-sullivan-sbsb/">
+                <i class="fab fa-linkedin-in mh2 ph1"></i>
               </a>
 
-              <a class="white" href="https://twitter.com/Retirement_Fail">
-                <i class="fas fa-envelope mh3"></i>
+              <a class="white still" href="mailto:onecooldude@gmail.com?subject=Retirement%20Fail%20Book%20by%20Greg%20Sullivan&body=http://retirementfail.com.">
+                <i class="fas fa-envelope mh2 ph1"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
     </footer>
-
-    <!-- vue.js - a javascript framework -->
-    <script src="https://unpkg.com/vue"></script>
 
     <!-- jquery -->
     <script
@@ -264,7 +266,6 @@
     <!-- mobile nav -->
     <script type="text/javascript">
       $(document).ready(function(){
-        // mobile nav
         $('#mobile-nav-close').click(function (e) {
           e.preventDefault();
           $('#mobile-nav').addClass('slideOutRight').removeClass('slideInRight');
@@ -274,11 +275,6 @@
           e.preventDefault();
           $('#mobile-nav').addClass('slideInRight').removeClass('slideOutRight dn');
           $('body').addClass('overlay-is-open');
-        });
-
-        // nav active state
-        $(function() {
-          $('.nav-link[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
         });
       });
     </script>
