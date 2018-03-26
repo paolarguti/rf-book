@@ -3,18 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="./assets/favicon.ico" type="image" sizes="16x16">
 
     <!-- remove -->
     <meta name="robots" content="noindex">
 
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800" rel="stylesheet">
-
-    <!-- font awesome - an icons library -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <!-- animate.css - a css animations library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <!-- tachyons - a css framework -->
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
+    <!-- app css -->
     <link rel="stylesheet" href="./assets/app.css"/>
   </head>
 
@@ -23,30 +22,30 @@
       <div class="container pb5-l pb4">
         <div class="bb flex justify-between items-end fw4 ttu tracked">
           <p class="mb0 fw8 pt4 pb2">
-            <a href="/" class="black no-underline">Retirement Fail</a>
+            <a href="/" class="black no-underline still">Retirement Fail</a>
           </p>
 
           <nav class="dn db-l">
             <ul class="list flex mv0 section f6">
               <li class="mh3 pt4 pb2 relative">
-                <a href="/author" class="black no-underline">
+                <a href="/author.html" class="black no-underline">
                   The author
                 </a>
                 <!-- if active -->
                 <!-- <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div> -->
               </li>
               <li class="mh3 pt4 pb2 relative">
-                <a href="/quiz" class="black no-underline">
+                <a href="/quiz.html" class="black no-underline">
                   Take the quiz
                 </a>
               </li>
-              <li class="mh3 pt4 pb2 relative">
-                <a href="/resources" class="black no-underline">
+              <!-- <li class="mh3 pt4 pb2 relative">
+                <a href="/resources.html" class="black no-underline">
                   Resources
                 </a>
-              </li>
+              </li> -->
               <li class="mh3 pt4 pb2 relative">
-                <a href="/contact" class="black no-underline">
+                <a href="/contact.html" class="black no-underline">
                   Contact
                 </a>
               </li>
@@ -55,7 +54,7 @@
 
           <!-- mobile navigation trigger -->
           <a id="mobile-nav-open" href="#" class="db dn-l pt4 pb2 fw8">
-            <i class="fas fa-bars"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 2 24 20"><path fill="#009bd9" d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
           </a>
         </div>
       </div>
@@ -75,24 +74,24 @@
 
         <ul class="pa3 ma0 list">
           <li class="mh3 pt4 pb2 relative">
-            <a href="/author" class="black no-underline">
+            <a href="/author.html" class="black no-underline">
               About the author
             </a>
             <!-- if active -->
             <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
           </li>
           <li class="mh3 pt4 pb2 relative">
-            <a href="/quiz" class="black no-underline">
+            <a href="/quiz.html" class="black no-underline">
               Take the quiz
             </a>
           </li>
-          <li class="mh3 pt4 pb2 relative">
+         <!--  <li class="mh3 pt4 pb2 relative">
             <a href="/resources" class="black no-underline">
               Resources
             </a>
-          </li>
+          </li> -->
           <li class="mh3 pt4 pb2 relative">
-            <a href="/contact" class="black no-underline">
+            <a href="/contact.html" class="black no-underline">
               Contact
             </a>
           </li>
@@ -119,7 +118,7 @@
                 <a href="https://www.amazon.com/Retirement-Fail-Reasons-People-Post-Work/dp/1119447402/ref=sr_1_1?ie=UTF8&qid=1518046485&sr=8-1&keywords=retirement+fail%27" class="btn mh2 mb3 mb0-l" target="_blank">
                   Shop at Amazon
                 </a>
-                <a href="https://www.barnesandnoble.com/w/retirement-fail-greg-sullivan/1126539411?ean=9781119447405 " class="btn mh2" target="_blank">
+                <a href="https://www.barnesandnoble.com/w/retirement-fail-greg-sullivan/1126539411?ean=9781119447405 " class="btn mh2 mb3 mb0-l" target="_blank">
                   Shop at Barnes & Noble
                 </a>
                 <a href="https://www.wiley.com/en-us/Retirement+Fail%3A+The+9+Reasons+People+Flunk+Post+Work+Life+and+How+to+Ace+Your+Own-p-9781119452980" class="btn mh2 mb3 mb0-l" target="_blank">
@@ -139,7 +138,7 @@
                 <h2 class="f4 mb3 mt0">Take The Retirement Fail Quiz!</h2>
                 <p class="mb4">The choices we take are more important than the money we make. Take the free retirement fail quiz and learn how to avoid pitfalls that could keep you from your goals.</p>
                 <div class="dib">
-                  <a href="#" class="btn f6 mh2 db">Take the quiz</a>
+                  <a href="/quiz.html" class="btn f6 mh2 db">Take the quiz</a>
                 </div>
               </div>
             </div>
@@ -157,7 +156,7 @@
             <div class="w-60-ns w-100 pl3-ns">
               <h3 class="f3 mt0 mb3">The Author</h3>
               <p>Greg Sullivan is the president and CEO of Sullivan, Bruyette, Speros & Blayney, and is a Certified Financial PlannerTM  professional and a certified public accountant (CPA) with more than 35 years of business, investment management, and financial planning experience. Barron’s, a national financial publication, has recognized Greg as one of the nation’s Top 100 Independent Financial Advisors and Washingtonian magazine named him as one of the Top Wealth Advisors in Washington, DC.</p>
-              <a href="#">Learn more about Greg Sullivan</a>
+              <a href="/author.html">Learn more about Greg Sullivan</a>
             </div>
           </div>
 
@@ -184,25 +183,25 @@
       </section>
     </main>
 
-    <footer class="flex-none bg-blue"">
-      <div class="relative pv2">
+    <footer class="flex-none bg-blue">
+      <div class="relative pv3">
         <div class="container">
           <div class="flex flex-column flex-row-ns justify-between-ns justify-center items-center white">
             <div class="f6 ttu tracked order-1-ns order-2">
               ©Copyright Greg Sullivan 2018
             </div>
 
-            <div class="flex section items-center f4 order-1 order-2-ns ph2-l mb2 mb0-ns">
-              <a class="white still" href="https://twitter.com/Retirement_Fail">
-                <i class="fab fa-twitter mh2 ph1"></i>
+            <div class="flex section items-center order-1 order-2-ns ph2-l mb2 mb0-ns">
+              <a class="lh-solid ph2 mh1" href="https://twitter.com/Retirement_Fail">
+                <svg class="db" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" preserveAspectRatio="xMidYMin meet"><path fill="#ffffff" d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
               </a>
 
-              <a class="white still" href="https://www.linkedin.com/in/greg-sullivan-sbsb/">
-                <i class="fab fa-linkedin-in mh2 ph1"></i>
+              <a class="lh-solid ph2 mh1" href="https://www.linkedin.com/in/greg-sullivan-sbsb/">
+                <svg class="db" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" preserveAspectRatio="xMidYMin meet"><path fill="#ffffff" d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
               </a>
 
-              <a class="white still" href="mailto:onecooldude@gmail.com?subject=Retirement%20Fail%20Book%20by%20Greg%20Sullivan&body=http://retirementfail.com.">
-                <i class="fas fa-envelope mh2 ph1"></i>
+              <a class="lh-solid ph2 mh1" href="mailto:?subject=Retirement%20Fail%20Book%20by%20Greg%20Sullivan&body=http://retirementfail.com.">
+                <svg class="db" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" preserveAspectRatio="xMidYMin meet"><path fill="#ffffff" d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
               </a>
             </div>
           </div>

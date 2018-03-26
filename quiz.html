@@ -9,27 +9,12 @@
     <meta name="robots" content="noindex">
 
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800" rel="stylesheet">
-    <!-- material design for vue.js -->
-    <link rel="stylesheet" href="./assets/material.css"/>
-    <link rel="stylesheet" href="./assets/material-theme.css"/>
     <!-- animate.css - a css animations library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <!-- tachyons - a css framework -->
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
     <!-- app css -->
     <link rel="stylesheet" href="./assets/app.css"/>
-
-    <!-- overwrite styles introduced by material design -->
-    <style>
-      .md-body-1,
-      .md-body-2,
-      body {
-        font-size: 18px;
-      },
-      .no-underline {
-        text-decoration: none!important;
-      }
-    </style>
   </head>
 
   <body class="bg-near-white flex flex-column overflow-x-hidden h-100 min-vh-100">
@@ -51,9 +36,11 @@
                 <a href="/quiz.html" class="black no-underline">
                   Take the quiz
                 </a>
+                <!-- if active -->
+                <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
               </li>
              <!--  <li class="mh3 pt4 pb2 relative">
-                <a href="/resources" class="black no-underline">
+                <a href="/resources.html" class="black no-underline">
                   Resources
                 </a>
               </li> -->
@@ -61,15 +48,15 @@
                 <a href="/contact.html" class="black no-underline">
                   Contact
                 </a>
-                <!-- if active -->
-                <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
               </li>
             </ul>
           </nav>
 
           <!-- mobile navigation trigger -->
           <a id="mobile-nav-open" href="#" class="db dn-l pt4 pb2 fw8">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 2 24 20"><path fill="#009bd9" d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 2 24 20">
+              <path fill="#009bd9" d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
+            </svg>
           </a>
         </div>
       </div>
@@ -92,14 +79,16 @@
             <a href="/author.html" class="black no-underline">
               About the author
             </a>
+            <!-- if active -->
+            <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
           </li>
           <li class="mh3 pt4 pb2 relative">
             <a href="/quiz.html" class="black no-underline">
               Take the quiz
             </a>
           </li>
-         <!--  <li class="mh3 pt4 pb2 relative">
-            <a href="/resources" class="black no-underline">
+          <!-- <li class="mh3 pt4 pb2 relative">
+            <a href="/resources.html" class="black no-underline">
               Resources
             </a>
           </li> -->
@@ -107,52 +96,16 @@
             <a href="/contact.html" class="black no-underline">
               Contact
             </a>
-            <!-- if active -->
-            <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
           </li>
         </ul>
       </div>
     </header>
 
-    <main class="w-100 overflow-hidden h-100">
-      <section class="container tc pb4">
-        <h1 class="f3">Get In Touch!</h1>
-        <div id="form" class="pa4-ns pa3 bg-white shadow-4 dib tl mw-100">
-          <div v-show="true" id="form" class="paragraph mw-100 center" style="display: none;">
-            <div class="flex flex-row-l flex-column ph2">
-              <div class="ph2 w-50-l w-100">
-                <md-field :class="{'md-invalid': !formValid && contactInfo.firstName === ''}">
-                  <label>First Name</label>
-                  <md-input v-model="contactInfo.firstName" placeholder="First Name"></md-input>
-                </md-field>
-              </div>
-
-              <div class="ph2 w-50-l w-100">
-                <md-field :class="{'md-invalid': !formValid && contactInfo.lastName === ''}">
-                  <label>Last Name</label>
-                  <md-input v-model="contactInfo.lastName" placeholder="Last Name"></md-input>
-                </md-field>
-              </div>
-            </div>
-
-            <div class="ph3">
-              <md-field :class="{'md-invalid': !formValid && contactInfo.email.indexOf('@') < 0}">
-                <label>Email</label>
-                <md-input v-model="contactInfo.email" placeholder="Email"></md-input>
-              </md-field>
-            </div>
-
-            <div class="ph3 pt2">
-              <md-field :class="{'md-invalid': !formValid && contactInfo.message === ''}">
-                <label>Message</label>
-                <md-textarea v-model="contactInfo.message" placeholder="Message"></md-textarea>
-              </md-field>
-            </div>
-
-            <div class="ph3 pt2 tc">
-              <button v-show="!formSubmitted" class="btn dib f6" @click.prevent="postForm">Send Message</button>
-              <p v-show="formSubmitted" style="color:#d3086a">We’ve received your message!</p>
-            </div>
+    <main class="w-100 h-100 overflow-hidden">
+      <section class="mb5">
+        <div class="container">
+          <div class="paragraph center mw-100">
+            <script type="text/javascript" >document.write('<script src="http' + ( ("https:" == document.location.protocol) ? "s" : "") + '://www.surveygizmo.com/s3/4246804/Retirement-Fail-Quiz?__no_style=true&__output=embedjs&__ref=' + escape(document.location.origin + document.location.pathname) + '" type="text/javascript" ></scr' + 'ipt>');</script><noscript>Better understand target audiences with incredibly easy to use <a href="https://try.surveygizmo.com/research">SurveyGizmo</a>market research tools</a>. <a href="https://www.surveygizmo.com/s3/4246804/Retirement-Fail-Quiz?__no_style=true&?jsfallback=true">Please take my survey now</a></noscript><style>.sg-survey{display:none; }</style>
           </div>
         </div>
       </section>
@@ -190,12 +143,6 @@
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
 
-    <!-- vue.js - a javascript framework -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-
-    <!-- material design for vue.js -->
-    <script src="https://unpkg.com/vue-material@beta"></script>
-
     <!-- mobile nav -->
     <script type="text/javascript">
       $(document).ready(function(){
@@ -209,46 +156,6 @@
           $('#mobile-nav').addClass('slideInRight').removeClass('slideOutRight dn');
           $('body').addClass('overlay-is-open');
         });
-      });
-    </script>
-
-    <!-- contact form -->
-    <script>
-      Vue.use(VueMaterial.default);
-
-      var form = new Vue({
-        el: '#form',
-        data: {
-          contactInfo: {
-            firstName: '',
-            lastName: '',
-            email: '',
-            message: ''
-          },
-          formValid: true,
-          formSubmitted: false
-        },
-        methods: {
-          onSuccess: function() {
-            this.contactInfo.firstName = '';
-            this.contactInfo.lastName = '';
-            this.contactInfo.email = '';
-            this.contactInfo.message = '';
-            this.formSubmitted = true;
-          },
-          postForm: function() {
-            var self = this;
-            if (this.contactInfo.firstName != '' && this.contactInfo.lastName != '' && this.contactInfo.firstName != '' && this.contactInfo.email.indexOf('@') >= 0 && this.contactInfo.message != '') {
-              this.formValid = true;
-            } else {
-              this.formValid = false;
-            }
-            if (this.formValid) {
-              jQuery.post('https://hooks.zapier.com/hooks/catch/3089748/kqu580/', self.contactInfo, function() {self.onSuccess();});
-
-            }
-          }
-        }
       });
     </script>
   </body>
