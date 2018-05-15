@@ -68,7 +68,7 @@
   a:hover:not(.still),
   a:active:not(.still) {
     color: #005e82;
-  },
+  }
 /* #layout */
 
   /* ##keep footer at the bottom */
@@ -208,33 +208,6 @@
 
   #blog:before {
     top: 144px;
-  }
-
-/*quiz*/
-  .sg-survey-form .sg-content {
-    padding: 0;
-  }
-  .sg-header,
-  .sg-page-title {
-    display: none;
-  }
-  .sg-survey-form .sg-question-title {
-    font-weight: 600;
-    font-size: font-size: 1.414rem;
-    margin-bottom: 1rem;
-  }
-  .sg-survey-form .sg-question-options label {
-    font-weight: 300;
-  }
-  .sg-survey-form .sg-progress-bar-background {
-    background: #ffffff;
-  }
-  .sg-progress-bar .sg-progress-bar-inner,
-  .sg-progress-bar .sg-progress-bar-text {
-    background-color: #fdb813;
-  }
-  .sg-footer {
-    margin-top: 2rem;
   }
 
 /*not small*/

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../assets/favicon.ico" type="image" sizes="16x16">
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800" rel="stylesheet">
+    <!-- animate.css - a css animations library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- tachyons - a css framework -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
+    <!-- app css -->
+    <link rel="stylesheet" href="../assets/app.css"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102750034-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-102750034-3');
+    </script>
+  </head>
+
+  <body class="bg-near-white flex flex-column overflow-x-hidden h-100 min-vh-100">
+    <header class="bg-yellow z-999 flex-none">
+      <div class="container pb5-l pb4">
+        <div class="bb flex justify-between items-end fw4 ttu tracked">
+          <p class="mb0 fw8 pt4 pb2">
+            <a href="/" class="black no-underline still">Retirement Fail</a>
+          </p>
+
+          <nav class="dn db-l">
+            <ul class="list flex mv0 section f6">
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/author" class="black no-underline">
+                  The author
+                </a>
+              </li>
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/quiz" class="black no-underline">
+                  Take the quiz
+                </a>
+              </li>
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/resources" class="black no-underline">
+                  Resources
+                </a>
+                <!-- if active -->
+                <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
+              </li>
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/contact" class="black no-underline">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- mobile navigation trigger -->
+          <a id="mobile-nav-open" href="#" class="db dn-l pt4 pb2 fw8">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 2 24 20"><path fill="#009bd9" d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- mobile navigation -->
+      <div id="mobile-nav" class="fixed animated bg-white dn absolute--fill z-1 overflow-y-scroll">
+        <div class="ph3">
+          <div class="flex justify-between w-100 items-center bb pt4 pb2 fw8">
+            <a href="/" class="black no-underline ttu tracked">
+              Retirement Fail
+            </a>
+            <a id="mobile-nav-close" href="#" class="no-underline pointer">
+              X
+            </a>
+          </div>
+        </div>
+
+        <ul class="pa3 ma0 list">
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/author" class="black no-underline">
+              About the author
+            </a>
+          </li>
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/quiz" class="black no-underline">
+              Take the quiz
+            </a>
+          </li>
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/resources" class="black no-underline">
+              Resources
+              <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
+            </a>
+          </li>
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/contact" class="black no-underline">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="w-100 overflow-hidden">
+
+      <div id="blog" class="bg-yellow relative">
+
+        <article class="relative container pb5 tc">
+          <div class="dib pa5-l pa4-m pa3 bg-white mw-100 shadow-4 tl">
+            <div class="paragraph mw-100">
+              <div>
+                <p class="black-40 ttu tracked f6">By Greg Sullivan</p>
+              </div>
+
+              <h1 class="f2-l f3-m f4">Retiring from Retirement</h1>
+
+              <div class="mb3">
+                <a href="mailto:?subject=Retiring%20from%20Retirement&body=Retiring%20from%20Retirement%20by%20Greg%20Sullivan%20http://retirementfail.com/resources/entrepreneur" class="mr1 no-underline" target="_blank">
+                  <svg aria-hidden="true" data-prefix="fas" data-icon="envelope-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24">
+                    <path fill="currentColor" d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM178.117 262.104C87.429 196.287 88.353 196.121 64 177.167V152c0-13.255 10.745-24 24-24h272c13.255 0 24 10.745 24 24v25.167c-24.371 18.969-23.434 19.124-114.117 84.938-10.5 7.655-31.392 26.12-45.883 25.894-14.503.218-35.367-18.227-45.883-25.895zM384 217.775V360c0 13.255-10.745 24-24 24H88c-13.255 0-24-10.745-24-24V217.775c13.958 10.794 33.329 25.236 95.303 70.214 14.162 10.341 37.975 32.145 64.694 32.01 26.887.134 51.037-22.041 64.72-32.025 61.958-44.965 81.325-59.406 95.283-70.199z" class=""></path>
+                  </svg>
+                </a>
+
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://retirementfail.com/resources/entrepreneur" class="mr1 no-underline" target="_blank">
+                  <svg aria-hidden="true" data-prefix="fab" data-icon="linkedin" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24">
+                    <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" class=""></path>
+                  </svg>
+                </a>
+
+                <a href="https://twitter.com/intent/tweet?text=Retiring%20from%20Retirement&tw_p=tweetbutton&url=http://retirementfail.com/resources/entrepreneur" class="no-underline" target="_blank">
+                  <svg aria-hidden="true" data-prefix="fab" data-icon="twitter-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24">
+                    <path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z" class=""></path>
+                  </svg>
+                </a>
+              </div>
+
+              <img class="mw-100 mb4 db" src="../assets/entrepreneur.jpg">
+
+              <div>
+                <p>If your work life has been go, go, go for decades, stopping suddenly can be jarring. After all, you’re shifting from a workday in which nearly every minute of your time is scheduled and you are in constant demand to a daily routine in which you may have nothing of great consequence to do, no place to be, and no one counting on you for your insight or acumen. Your first thought when confronted with post-work restlessness may be, “I’ll start a business!”.<sup><a href="#fn1" id="ref1">1</a></sup></p>
+
+                <p>The Kauffman Index of Startup Activity found that, in 2016, roughly 24% of new entrepreneurs were aged 55 to 64, up from 15% in 1997.</p>
+
+                <p>There are numerous pitfalls associated with business start-ups, however, and these can derail your retirement savings if you are not careful, jeopardizing your future financial independence and threatening your peace of mind. Fifty-five percent of businesses fail in their first five years, often because the entrepreneur lacks the skills or experience to run the company or because he or she allows emotions to cloud judgment.<sup><a href="#fn2" id="ref2">2</a></sup></p>
+
+                <p>Having a solid business plan can not only limit your exposure financially but also ensure that you have the pieces in place to give your fledgling company the best chance for success.</p>
+
+
+                <h2 class="f4 mt4">The Five Essentials of Entrepreneurship</h2>
+
+                <p>In my 35-plus years running a business with my partners, I’ve learned a few things about entrepreneurship. Here are five essential qualities or skills you must have if you are to succeed as an entrepreneur:</p>
+
+                <ol>
+                  <li>You need to have a strong vision. You must be able to see clearly what you want to build and have the passion to follow through on your goals.</li>
+                  <li>You must be a good decision maker. As an entrepreneur, you will be responsible for executing your business plan; you must be able to generate a range of potential solutions to problems, evaluate all the options, and decide quickly and confidently on the course that will lead to the best outcome.</li>
+                  <li>You need to manage risk appropriately. Starting a business is inherently risky—that’s just the nature of entrepreneurship. But a successful entrepreneur knows how to evaluate risks and choose wisely, how to minimize the downside, and when to cut her losses.</li>
+                  <li>You must be a good listener. Being open to the opinions and suggestions of others means that you will get greater insight into the strengths and weaknesses of your business and will get more feedback that can help you head off problems or generate solutions.</li>
+                  <li>You need to be a great communicator. You have to be able to share your vision with others – partners, employees, investors, customers – and you must be able to effectively communicate goals and expectations for everyone in the company.</li>
+                </ol>
+
+                <p>Before beginning any entrepreneurial venture, make an honest assessment of your skills. If you are deficient in one or two of the qualities on this list, you may be able to develop them, or you may find a partner who can fill in those gaps. You might also learn that you aren’t suited to the uncertainty of a start-up and would find another type of work more satisfying. Don’t underestimate the pressures that come with entrepreneurship.</p>
+
+                <h2 class="f4 mt4">Safeguard Retirement Assets</h2>
+
+                <p>It is helpful to know what you can afford to lose and what you can’t. Set a predetermined dollar amount that you define as your retirement nest egg and do not allow your investment in the business to exceed that amount. Period. You don’t want your entrepreneurial investment to disrupt your retirement plans, forcing you back into a traditional job to make up any shortfall.</p>
+
+                <p>Before jumping in, ask yourself whether the stress involved in running a start-up, even a successful one, is worth it at this time in your life.</p>
+
+                <h2 class="f4 mt4">Finding Work You Love</h2>
+
+                <p>People who love their work are those who find meaning in what they are doing. That may involve following your passion and starting a new enterprise. Or it may mean volunteering for a nonprofit or working part-time for a company whose mission you admire.</p>
+
+                <p>Identify the impact you want to make in the world and look for a way to move toward that goal. Retirement is a time that you can afford to put your energies toward your life’s purpose, and if the work of your career didn’t fulfill you, this is your opportunity. There are many ways to do this, even without setting off on a full-fledged entrepreneurial adventure. And if you’ve determined that a business start-up is indeed what you want to do, enter the endeavor fully prepared. Entrepreneurship becomes a retirement fail only when you lack the necessary skills or spirit, launch without adequate plans in place, and neglect to limit your exposure to the risks.</p>
+
+                <p>Cheers,<br>Greg</p>
+
+                <p class="f6 mt4" id="fn1">1.Robert W. Fairlie, E. J. Reedy, Arnobio Morelix, and Joshua Russell, The Kauffman 2016 Index of Startup Activity, August 2016.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></p>
+
+                <p class="f6" id="fn2">2.“Startup Business Failure Rate by Industry,” Statistic Brain. Accessed June 21, 2017. http://www.statisticbrain.com/startup-failure-by-industry/<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a>.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="flex-none bg-blue">
+      <div class="relative pv3">
+        <div class="container">
+          <div class="flex flex-column flex-row-ns justify-between-ns justify-center items-center white">
+            <div class="f6 ttu tracked order-1-ns order-2">
+              ©Copyright Greg Sullivan 2018
+            </div>
+
+            <div class="flex section items-center order-1 order-2-ns ph2-l mb2 mb0-ns">
+              <a class="lh-solid ph2 mh1" href="https://twitter.com/Retirement_Fail">
+                <svg class="db" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" preserveAspectRatio="xMidYMin meet"><path fill="#ffffff" d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+              </a>
+
+              <a class="lh-solid ph2 mh1" href="https://www.linkedin.com/in/greg-sullivan-sbsb/">
+                <svg class="db" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" preserveAspectRatio="xMidYMin meet"><path fill="#ffffff" d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+              </a>
+
+              <a class="lh-solid ph2 mh1" href="mailto:?subject=Retirement%20Fail%20Book%20by%20Greg%20Sullivan&body=http://retirementfail.com.">
+                <svg class="db" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" preserveAspectRatio="xMidYMin meet"><path fill="#ffffff" d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+
+    <!-- mobile nav -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#mobile-nav-close').click(function (e) {
+          e.preventDefault();
+          $('#mobile-nav').addClass('slideOutRight').removeClass('slideInRight');
+          $('body').removeClass('overlay-is-open')
+        });
+        $('#mobile-nav-open').click(function (e) {
+          e.preventDefault();
+          $('#mobile-nav').addClass('slideInRight').removeClass('slideOutRight dn');
+          $('body').addClass('overlay-is-open');
+        });
+      });
+    </script>
+  </body>
+</html>

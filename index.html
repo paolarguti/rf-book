@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="./assets/favicon.ico" type="image" sizes="16x16">
 
-    <!-- remove -->
-    <meta name="robots" content="noindex">
-
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800" rel="stylesheet">
     <!-- animate.css - a css animations library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -15,6 +12,14 @@
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
     <!-- app css -->
     <link rel="stylesheet" href="./assets/app.css"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102750034-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-102750034-3');
+    </script>
   </head>
 
   <body class="bg-near-white flex flex-column overflow-x-hidden h-100 min-vh-100">
@@ -28,24 +33,22 @@
           <nav class="dn db-l">
             <ul class="list flex mv0 section f6">
               <li class="mh3 pt4 pb2 relative">
-                <a href="/author.html" class="black no-underline">
+                <a href="/author" class="black no-underline">
                   The author
                 </a>
-                <!-- if active -->
-                <!-- <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div> -->
               </li>
               <li class="mh3 pt4 pb2 relative">
-                <a href="/quiz.html" class="black no-underline">
+                <a href="/quiz" class="black no-underline">
                   Take the quiz
                 </a>
               </li>
-              <!-- <li class="mh3 pt4 pb2 relative">
-                <a href="/resources.html" class="black no-underline">
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/resources" class="black no-underline">
                   Resources
                 </a>
-              </li> -->
+              </li>
               <li class="mh3 pt4 pb2 relative">
-                <a href="/contact.html" class="black no-underline">
+                <a href="/contact" class="black no-underline">
                   Contact
                 </a>
               </li>
@@ -74,24 +77,22 @@
 
         <ul class="pa3 ma0 list">
           <li class="mh3 pt4 pb2 relative">
-            <a href="/author.html" class="black no-underline">
+            <a href="/author" class="black no-underline">
               About the author
             </a>
-            <!-- if active -->
-            <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
           </li>
           <li class="mh3 pt4 pb2 relative">
-            <a href="/quiz.html" class="black no-underline">
+            <a href="/quiz" class="black no-underline">
               Take the quiz
             </a>
           </li>
-         <!--  <li class="mh3 pt4 pb2 relative">
+          <li class="mh3 pt4 pb2 relative">
             <a href="/resources" class="black no-underline">
               Resources
             </a>
-          </li> -->
+          </li>
           <li class="mh3 pt4 pb2 relative">
-            <a href="/contact.html" class="black no-underline">
+            <a href="/contact" class="black no-underline">
               Contact
             </a>
           </li>
@@ -110,8 +111,8 @@
 
             <div class="w-60-l w-50-m w-100 pl4-l order-1 order-2-ns mb4 mb0-ns">
               <div class="mb4 pb3">
-                <quote class="f3">“This book opens our eyes to how much of our retirement success is truly within our own control.”</quote>
-                <p class="pt3 mt2 mb0 ttu f6 tracked">Bernie Clark<br>Charles Schwab & Co.</p>
+                <quote class="f3">“This rare right-brain/left-brain view provides valuable guidance that can help all of us better navigate the road to a successful retirement and a more meaningful life.”</quote>
+                <p class="pt3 mt2 mb0 ttu f6 tracked">Don Phillips<br>Morningstar</p>
               </div>
 
               <div class="flex flex-wrap items-center f6 section ph2-l">
@@ -138,7 +139,7 @@
                 <h2 class="f4 mb3 mt0">Take The Retirement Fail Quiz!</h2>
                 <p class="mb4">The choices we take are more important than the money we make. Take the free retirement fail quiz and learn how to avoid pitfalls that could keep you from your goals.</p>
                 <div class="dib">
-                  <a href="/quiz.html" class="btn f6 mh2 db">Take the quiz</a>
+                  <a href="/quiz" class="btn f6 mh2 db">Take the quiz</a>
                 </div>
               </div>
             </div>
@@ -155,17 +156,21 @@
 
             <div class="w-60-ns w-100 pl3-ns">
               <h3 class="f3 mt0 mb3">The Author</h3>
-              <p>Greg Sullivan is the president and CEO of Sullivan, Bruyette, Speros & Blayney, and is a Certified Financial PlannerTM  professional and a certified public accountant (CPA) with more than 35 years of business, investment management, and financial planning experience. Barron’s, a national financial publication, has recognized Greg as one of the nation’s Top 100 Independent Financial Advisors and Washingtonian magazine named him as one of the Top Wealth Advisors in Washington, DC.</p>
-              <a href="/author.html">Learn more about Greg Sullivan</a>
+              <p>Greg Sullivan is the president and CEO of Sullivan, Bruyette, Speros & Blayney, and is a Certified Financial Planner<sup>TM</sup> professional and a certified public accountant (CPA) with more than 35 years of business, investment management, and financial planning experience. Barron’s, a national financial publication, has recognized Greg as one of the nation’s Top 100 Independent Financial Advisors and Washingtonian magazine named him as one of the Top Wealth Advisers in Washington, DC.</p>
+              <a href="/author">Learn more about Greg Sullivan</a>
             </div>
           </div>
 
           <!-- This slider is done using vue.js  -->
           <div id="slider" class="tc mv4 pt5 mw-100">
+            <div class="paragraph mw-100 center">
+              <h3 class="mb4">What others are saying about Retirement Fail?</h3>
+            </div>
+
             <div class="paragraph mw-100 tl center pv4 bt bb b--black mb4">
               <transition tag="div" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" mode="out-in">
                 <div v-for="review in reviews" v-if="review.i == activeReview" :key="review.i">
-                  <a class="no-underline black still" href="#" @click.prevent="next">
+                  <a class="no-underline black still" href="#" @click.prevent="next"  @mouseover="stopRotation" @mouseout="startRotation">
                     <p class="mb4" v-html="review.review"></p>
                     <p class="mb0 ttu f6 tracked">{{ review.author }}</p>
                   </a>
@@ -263,17 +268,29 @@
             },
             {
               i: 5,
-              review: '“If you’re approaching or are in retirement this is a book you need to read. The introduction asks, “What is most important to you in your post-work life and how can you translate that into your day-to-day living and decision making?” Retirement Fail delivers on its commitment to help you answer that essential question.<br><br>Think of Retirement Fail as tough love. Reading all of the possible reasons your retirement may fail might seem to be an unpleasant experience but Greg Sullivan’s very readable real-world vignettes on issues from “imprudent spending” to “graying divorce” will provide you with the awareness and knowledge you need to insure you don’t fail”',
+              review: '“If you’re approaching or are in retirement this is a book you need to read. The introduction asks, “What is most important to you in your post-work life and how can you translate that into your day-to-day living and decision making?” Retirement Fail delivers on its commitment to help you answer that essential question.<br><br>Think of Retirement Fail as tough love. Reading all of the possible reasons your retirement may fail might seem to be an unpleasant experience but Greg Sullivan’s very readable real-world vignettes on issues from “imprudent spending” to “graying divorce” will provide you with the awareness and knowledge you need to ensure you don’t fail”',
               author: 'Harold Evensky CFP®'
             }
           ],
+          timer: null
         },
 
         methods: {
+          startRotation: function() {
+            this.timer = setInterval(this.next, 3000);
+          },
+          stopRotation: function() {
+            clearTimeout(this.timer);
+            this.timer = null;
+          },
           next: function() {
             this.activeReview = this.activeReview == 5 ? 1 : this.activeReview + 1;
           }
-        }
+        },
+
+        mounted: function () {
+          this.startRotation();
+        },
       });
     </script>
   </body>

@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="./assets/favicon.ico" type="image" sizes="16x16">
 
-    <!-- remove -->
-    <meta name="robots" content="noindex">
-
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800" rel="stylesheet">
     <!-- animate.css - a css animations library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -15,6 +12,67 @@
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
     <!-- app css -->
     <link rel="stylesheet" href="./assets/app.css"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102750034-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-102750034-3');
+    </script>
+
+    <style type="text/css">
+      .sg-survey-form .sg-content {
+        padding: 0;
+      }
+      .sg-header,
+      .sg-page-title {
+        display: none;
+      }
+      .sg-survey-form .sg-question-title {
+        font-weight: 600;
+        font-size: 1.414rem;
+        margin-bottom: 1rem;
+      }
+      .sg-body .sg-content h3 {
+        font-weight: 600;
+        font-size: 1.414rem;
+      }
+      .sg-body .sg-content p {
+        font-size: 1rem;
+        line-height: 1.618;
+      }
+      .sg-body .sg-content .answer * {
+        font-size: 18px!important;
+      }
+      .sg-survey-form .sg-question-options label {
+        font-weight: 300;
+      }
+      .sg-survey-form .sg-progress-bar-background {
+        background: #ffffff;
+      }
+      .sg-progress-bar .sg-progress-bar-inner,
+      .sg-progress-bar .sg-progress-bar-text {
+        background-color: #fdb813;
+      }
+      .sg-footer {
+        margin-top: 2rem;
+      }
+      .sg-survey-form .sg-slider-element-horizontal .sg-slider {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .sg-survey-form .sg-slider .sg-slider-label-left-horizontal,
+      .sg-survey-form .sg-slider .sg-slider-label-right-horizontal {
+        width: auto;
+      }
+      .sg-survey-form .sg-slider-label.js-label-slider-center {
+        margin-top: .5rem;
+      }
+      .sg-survey-form .sg-question textarea {
+        width: 100%;
+      }
+    </style>
   </head>
 
   <body class="bg-near-white flex flex-column overflow-x-hidden h-100 min-vh-100">
@@ -28,24 +86,24 @@
           <nav class="dn db-l">
             <ul class="list flex mv0 section f6">
               <li class="mh3 pt4 pb2 relative">
-                <a href="/author.html" class="black no-underline">
+                <a href="/author" class="black no-underline">
                   The author
                 </a>
               </li>
               <li class="mh3 pt4 pb2 relative">
-                <a href="/quiz.html" class="black no-underline">
+                <a href="/quiz" class="black no-underline">
                   Take the quiz
                 </a>
                 <!-- if active -->
                 <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
               </li>
-             <!--  <li class="mh3 pt4 pb2 relative">
-                <a href="/resources.html" class="black no-underline">
+              <li class="mh3 pt4 pb2 relative">
+                <a href="/resources" class="black no-underline">
                   Resources
                 </a>
-              </li> -->
+              </li>
               <li class="mh3 pt4 pb2 relative">
-                <a href="/contact.html" class="black no-underline">
+                <a href="/contact" class="black no-underline">
                   Contact
                 </a>
               </li>
@@ -76,24 +134,24 @@
 
         <ul class="pa3 ma0 list">
           <li class="mh3 pt4 pb2 relative">
-            <a href="/author.html" class="black no-underline">
+            <a href="/author" class="black no-underline">
               About the author
+            </a>
+          </li>
+          <li class="mh3 pt4 pb2 relative">
+            <a href="/quiz" class="black no-underline">
+              Take the quiz
             </a>
             <!-- if active -->
             <div class="absolute right-0 left-0 top-100 bb bw2 b--blue"></div>
           </li>
           <li class="mh3 pt4 pb2 relative">
-            <a href="/quiz.html" class="black no-underline">
-              Take the quiz
-            </a>
-          </li>
-          <!-- <li class="mh3 pt4 pb2 relative">
-            <a href="/resources.html" class="black no-underline">
+            <a href="/resources" class="black no-underline">
               Resources
             </a>
-          </li> -->
+          </li>
           <li class="mh3 pt4 pb2 relative">
-            <a href="/contact.html" class="black no-underline">
+            <a href="/contact" class="black no-underline">
               Contact
             </a>
           </li>
@@ -101,7 +159,7 @@
       </div>
     </header>
 
-    <main class="w-100 h-100 overflow-hidden">
+    <main class="w-100">
       <section class="mb5">
         <div class="container">
           <div class="paragraph center mw-100">

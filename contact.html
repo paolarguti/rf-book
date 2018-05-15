@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="./assets/favicon.ico" type="image" sizes="16x16">
 
-    <!-- remove -->
-    <meta name="robots" content="noindex">
-
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800" rel="stylesheet">
     <!-- material design for vue.js -->
     <link rel="stylesheet" href="./assets/material.css"/>
@@ -18,6 +15,14 @@
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
     <!-- app css -->
     <link rel="stylesheet" href="./assets/app.css"/>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102750034-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-102750034-3');
+    </script>
 
     <!-- overwrite styles introduced by material design -->
     <style>
@@ -43,22 +48,22 @@
           <nav class="dn db-l">
             <ul class="list flex mv0 section f6">
               <li class="mh3 pt4 pb2 relative">
-                <a href="/author.html" class="black no-underline">
+                <a href="/author" class="black no-underline">
                   The author
                 </a>
               </li>
               <li class="mh3 pt4 pb2 relative">
-                <a href="/quiz.html" class="black no-underline">
+                <a href="/quiz" class="black no-underline">
                   Take the quiz
                 </a>
               </li>
-             <!--  <li class="mh3 pt4 pb2 relative">
+              <li class="mh3 pt4 pb2 relative">
                 <a href="/resources" class="black no-underline">
                   Resources
                 </a>
-              </li> -->
+              </li>
               <li class="mh3 pt4 pb2 relative">
-                <a href="/contact.html" class="black no-underline">
+                <a href="/contact" class="black no-underline">
                   Contact
                 </a>
                 <!-- if active -->
@@ -89,22 +94,22 @@
 
         <ul class="pa3 ma0 list">
           <li class="mh3 pt4 pb2 relative">
-            <a href="/author.html" class="black no-underline">
+            <a href="/author" class="black no-underline">
               About the author
             </a>
           </li>
           <li class="mh3 pt4 pb2 relative">
-            <a href="/quiz.html" class="black no-underline">
+            <a href="/quiz" class="black no-underline">
               Take the quiz
             </a>
           </li>
-         <!--  <li class="mh3 pt4 pb2 relative">
+          <li class="mh3 pt4 pb2 relative">
             <a href="/resources" class="black no-underline">
               Resources
             </a>
-          </li> -->
+          </li>
           <li class="mh3 pt4 pb2 relative">
-            <a href="/contact.html" class="black no-underline">
+            <a href="/contact" class="black no-underline">
               Contact
             </a>
             <!-- if active -->
@@ -114,7 +119,7 @@
       </div>
     </header>
 
-    <main class="w-100 overflow-hidden h-100">
+    <main class="w-100">
       <section class="container tc pb4">
         <h1 class="f3">Get In Touch!</h1>
         <div id="form" class="pa4-ns pa3 bg-white shadow-4 dib tl mw-100">
